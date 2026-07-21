@@ -1,10 +1,13 @@
 body
 {
     margin:0;
+   
 }
 .sections
 {
     display:flex;
+
+    
 }
 .section1
 {
@@ -13,5 +16,15 @@ body
     align-items: center;
     border:1px solid black;
     width:30%;
+    height:100%;
+    
+}
+.recipesList
+{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    align-items: flex-start;
+    padding-left:50px;
     
 }
