@@ -96,13 +96,38 @@ recipes[0].addEventListener("click",()=>
         let ol=document.createElement("ol");
         let liA=document.createElement("li");
         let liB=document.createElement("li");
+        let liC=document.createElement("li");
+        let liD=document.createElement("li");
+        let liE=document.createElement("li");
+        let liF=document.createElement("li");
+        let liG=document.createElement("li");
+        let liH=document.createElement("li");
 
         liA.innerHTML="Gather all ingredients. Preheat the oven to 375 degrees F (190 degrees C). Lightly grease a 2-quart rectangular baking dish."
         liB.innerHTML="Combine zucchini and salt in a large bowl and toss to coat evenly. Transfer zucchini to a colander set in the sink. Let stand to drain excess moisture, 15 minutes. Transfer zucchini to a clean kitchen towel and squeeze out any remaining liquid. Use paper towels to wipe the large bowl dry.";
+        liC.innerHTML="Heat oil in a large skillet over medium heat. Add onion and cook until soft and translucent, about 4 minutes. Add garlic and cook until fragrant, 1 minute more."
+        liD.innerHTML="Whisk together eggs and pepper in the large bowl. Add zucchini, onion mixture, mozzarella, Cheddar, and 1/2 cup of the Parmesan cheese; combine thoroughly.";
+        liE.innerHTML="Transfer mixture to the prepared baking dish and spread into an even layer.";
+        liF.innerHTML="Bake, uncovered, for 20 minutes.";
+        liG.innerHTML="Meanwhile, combine panko and melted butter in a small bowl. Stir in remaining 1/4 cup Parmesan cheese.";
+        liH.innerHTML="Top casserole with breadcrumb mixture and bake until golden and crisp, 10 to 15 minutes. Garnish with chives.";
+
         // ol.append(stp1);
         ol.append(liA);
         ol.append(document.createElement("br"));
         ol.append(liB);
+        ol.append(document.createElement("br"));
+        ol.append(liC);
+        ol.append(document.createElement("br"));
+        ol.append(liD);
+        ol.append(document.createElement("br"));
+        ol.append(liE);
+        ol.append(document.createElement("br"));
+        ol.append(liF);
+        ol.append(document.createElement("br"));
+        ol.append(liG);
+        ol.append(document.createElement("br"));
+        ol.append(liG);
 
         temp.append(ol);
 
