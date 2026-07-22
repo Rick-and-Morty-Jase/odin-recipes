@@ -9,7 +9,8 @@ nav
     height:50px;
     display:flex;
     justify-content: space-around;
-    color:rgb(77, 77, 77)
+    color:rgb(77, 77, 77);
+    
 }
 .odinDiv
 {

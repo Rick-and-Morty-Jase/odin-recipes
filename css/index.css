@@ -6,7 +6,7 @@ body
 .sections
 {
     display:flex;
-
+    width: 100%;
     
 }
 .section1
@@ -17,7 +17,7 @@ body
     border:1px solid black;
     width:30%;
     height:100%;
-    
+    position: fixed;
 }
 .recipesList
 {
@@ -25,7 +25,7 @@ body
     flex-direction: column;
     width:100%;
     align-items: flex-start;
-    
+    height:100%;
     overflow-y: scroll;
 }
 .recipeItems
@@ -46,6 +46,5 @@ body
 .section2
 {
     width:60%;
-    margin-left: auto;
-    margin-right:auto;
+   
 }
