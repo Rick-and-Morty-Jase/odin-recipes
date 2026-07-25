@@ -145,7 +145,7 @@ recipes[0].addEventListener("click",()=>
             cloneDiv.id="section1";
             img.setAttribute("style","width:300px;height:300px;border-radius:20px;")
             
-            section2.setAttribute("style","width:100%;");
+            section2.setAttribute("style","widh")
         }
         
     });
