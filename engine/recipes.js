@@ -35,22 +35,27 @@ let swi=[false,false];
 
 function createButtons()
 {
+   navD
    let button1=document.createElement("label");
             let button2=document.createElement("label");
             button1.id="nxt";
             button2.id="prv";
             button1.innerHTML="Next"
             button2.innerHTML="Previous"
-            button1.addEventListener("click",()=>
-            {
-                loader();
-                swi[0]=true;
-                
-            });
+            button1.setAttribute("class","demoC");
+            button2.setAttribute("class","demoC");
             button2.addEventListener("click",()=>
             {
-              loader();
+              
+                swi[0]=true;
+                loader();
+                
+            });
+            button1.addEventListener("click",()=>
+            {
+          
               swi[0]=false;
+              loader();
               
             });
       navD.append(button2);
@@ -67,7 +72,7 @@ function createButtons()
             section2.setAttribute("class","phoneDiv");
             demo.setAttribute("class","demoC");
             demo.innerHTML="Home";
-            navDiv.setAttribute("style","margin-top:20px;");
+            navDiv.setAttribute("style"," display:flex;justify-content:space-around;width:100%;align-items:center;");
             
             
             
@@ -76,8 +81,14 @@ function createButtons()
       navD.append(button1);
       
 }
+function sizer(img1)
+{
+            img1.setAttribute("style","width:300px;height:300px;border-radius:20px;margin-left:auto;margin-right:auto;display:block;");
+}
 function loader()
 {
+    window.alert(seq);
+    
     if(swi[0]==false)
     {
       seq++;
@@ -140,6 +151,10 @@ function load0()
         let img=document.createElement("img");
         img.id="img1";
         img.src="./img/zukin.jpeg";
+        if(phone==true)
+        {
+          sizer(img);
+        }
         let item=document.createElement("p");
         item.innerHTML="This shredded zucchini casserole is a great recipe when your garden is overflowing with zucchini. Cheesy with a crunchy panko topping, it makes a tasty side dish to any roasted meat or fish.";
         let temp=document.createElement("div");
@@ -240,7 +255,7 @@ function load0()
 
         section2.append(temp);
         
-        if(swi[1]!=true)
+        if(swi[1]!=true && phone==true)
         {
           createButtons();
           swi[1]=true;
@@ -270,6 +285,10 @@ function load0()
         let img=document.createElement("img");
         img.id="img1";
         img.src="./img/cob.jpeg";
+        if(phone==true)
+        {
+          sizer(img);
+        }
         let item=document.createElement("p");
         item.innerHTML="This fresh peach cobbler has a hot sugar crust, and while you may resist the idea of pouring boiling water over a lot of sugar on top of your beautiful cobbler dough, don’t be nervous. It makes a delightful, crackly crust over the tender dough, a perfect complement to fresh, juicy peaches.";
         let temp=document.createElement("div");
@@ -385,6 +404,10 @@ function load0()
         let img=document.createElement("img");
         img.id="img1";
         img.src="./img/cab.jpeg";
+        if(phone==true)
+        {
+          sizer(img);
+        }
         let item=document.createElement("p");
         item.innerHTML="This dirty cabbage is savory and slightly spicy—Cajun seasoning and andouille sausage do the heavy lifting by adding lots of aroma and heat. Zesty is a pretty great word for this!";
         let temp=document.createElement("div");
@@ -502,6 +525,10 @@ function load0()
         let img=document.createElement("img");
         img.id="img1";
         img.src="./img/water.jpeg";
+        if(phone==true)
+        {
+          sizer(img);
+        }
         let item=document.createElement("p");
         item.innerHTML="This chunky watermelon salad with feta, arugula, red onion, and tomatoes is enjoyed by all. Thanks to the watermelon, the kids like it also!";
         let temp=document.createElement("div");
@@ -597,6 +624,10 @@ function load0()
         let img=document.createElement("img");
         img.id="img1";
         img.src="./img/cow.jpeg";
+        if(phone==true)
+        {
+          sizer(img);
+        }
         let item=document.createElement("p");
         item.innerHTML="These cowboy butter chicken skewers are one of the best ways to put homemade cowboy butter to use. Make the butter ahead of time, then brush it over juicy grilled chicken for an easy dinner packed with bold, buttery, smoky, and spicy flavor.";
         let temp=document.createElement("div");
@@ -710,6 +741,10 @@ function load0()
         let img=document.createElement("img");
         img.id="img1";
         img.src="./img/sali.jpeg";
+        if(phone==true)
+        {
+          sizer(img);
+        }
         let item=document.createElement("p");
         item.innerHTML="This Salisbury steak with mushroom gravy is wonderful over mashed potatoes or rice. A great from-scratch recipe I found a long time ago. The gravy is still good without mushrooms. I've made it for my husband that way.";
         let temp=document.createElement("div");
