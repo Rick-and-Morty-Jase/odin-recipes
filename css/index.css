@@ -48,3 +48,19 @@ body
     width:60%;
    
 }
+.phoneDiv
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    font-size: 25px;
+    padding:10px;
+}
+.demoC
+{
+    border:1px solid black;
+    border-radius: 10px;
+    padding:10px;
+    margin-top:25px;
+}
