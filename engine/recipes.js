@@ -1,4 +1,9 @@
 let recipes=new Array();
+
+let demo=document.getElementById("demo");
+let navD=document.getElementById("navDiv");
+let seq=0;
+let seq1=1;
 let end=false;
 let id=document.getElementById("test");
 let len=document.getElementById("recipeL").children.length;
@@ -7,7 +12,13 @@ let section1=document.getElementById("section1").offsetWidth;
 let windowW=window.innerWidth;
 let spacing=windowW-section1;
 spacing=spacing/2;
-section2.setAttribute("style","margin-left:"+spacing+"px;margin-top:20px;");
+if(phone!=true)
+{
+  section2.setAttribute("style","margin-left:"+spacing+"px;margin-top:20px;");
+  
+
+}
+
 //thinking of user adding recipes and how one would load this automatically 
 for(let i=0;i<len;i++)
 {
@@ -20,9 +31,101 @@ for(let i=0;i<len;i++)
     );*/
 }
 // will have to think about this properly i am running out of time its 19:48 im just going to t manually for now
+let swi=[false,false];
 
-recipes[0].addEventListener("click",()=>
+function createButtons()
+{
+   let button1=document.createElement("label");
+            let button2=document.createElement("label");
+            button1.id="nxt";
+            button2.id="prv";
+            button1.innerHTML="Next"
+            button2.innerHTML="Previous"
+            button1.addEventListener("click",()=>
+            {
+                loader();
+                swi[0]=true;
+                
+            });
+            button2.addEventListener("click",()=>
+            {
+              loader();
+              swi[0]=false;
+              
+            });
+      navD.append(button2);
+      if(phone!=false)
+        {
+           
+            let img1=document.getElementById("img1");
+            let section1=document.getElementById("section1");
+            const cloneDiv=section1.cloneNode;
+            section1.remove();
+            cloneDiv.id="section1";
+            img1.setAttribute("style","width:300px;height:300px;border-radius:20px;margin-left:auto;margin-right:auto;display:block;");
+            
+            section2.setAttribute("class","phoneDiv");
+            demo.setAttribute("class","demoC");
+            demo.innerHTML="Home";
+            navDiv.setAttribute("style","margin-top:20px;");
+            
+            
+            
+            
+        }
+      navD.append(button1);
+      
+}
+function loader()
+{
+    if(swi[0]==false)
     {
+      seq++;
+    }
+    else
+    {
+      seq--;
+    }
+    if(seq<=0)
+    {
+      seq=5;
+    }
+    if(seq>=6)
+    {
+      seq=0
+    }
+    if(seq==0)
+    {
+      load0();
+    }
+    if(seq==1)
+    {
+      load1();
+    }
+    if(seq==2)
+    {
+      load2();
+    }
+    if(seq==3)
+    {
+      load3();
+    }
+    if(seq==4)
+    {
+      load4();
+    }
+    if(seq==5)
+    {
+      load5();
+    }
+}
+
+recipes[0].addEventListener("click",load0);
+function load0()
+    {
+        
+        
+        seq=0;
         console.log("testing function1");
         try
         {
@@ -96,7 +199,7 @@ recipes[0].addEventListener("click",()=>
         temp.append(ingred);
         temp.append(ul);
         temp.append(dir);
-
+        console.log("added image");
         let ol=document.createElement("ol");
         let liA=document.createElement("li");
         let liB=document.createElement("li");
@@ -137,21 +240,20 @@ recipes[0].addEventListener("click",()=>
 
         section2.append(temp);
         
-        if(phone!=false)
+        if(swi[1]!=true)
         {
-            let section1=document.getElementById("section1");
-            const cloneDiv=section1.cloneNode;
-            section1.remove();
-            cloneDiv.id="section1";
-            img.setAttribute("style","width:300px;height:300px;border-radius:20px;")
-            
-            section2.setAttribute("style","widh")
+          createButtons();
+          swi[1]=true;
         }
         
-    });
+        
+    }
 
-    recipes[1].addEventListener("click",()=>
+    recipes[1].addEventListener("click",load1);
+    
+    function load1()
     {
+        seq=1;
         console.log("testing function1");
         try
         {
@@ -257,9 +359,11 @@ recipes[0].addEventListener("click",()=>
 
         section2.append(temp);
         
-    });
-    recipes[2].addEventListener("click",()=>
-    {
+    }
+    recipes[2].addEventListener("click",load2);
+   function load2 
+   {
+        seq=2;
         console.log("testing function1");
         try
         {
@@ -366,7 +470,7 @@ recipes[0].addEventListener("click",()=>
 
         section2.append(temp);
         
-    });
+    }
 
     recipes[3].addEventListener("click",()=>
     {
