@@ -244,6 +244,7 @@ function load0()
         {
           createButtons();
           swi[1]=true;
+          seq=0;
         }
         
         
@@ -253,7 +254,12 @@ function load0()
     
     function load1()
     {
-        seq=1;
+        if(swi[1]!=true)
+        {
+          createButtons();
+          swi[1]=true;
+          seq=1;
+        }
         console.log("testing function1");
         try
         {
@@ -361,9 +367,14 @@ function load0()
         
     }
     recipes[2].addEventListener("click",load2);
-   function load2 
+   function load2()
    {
-        seq=2;
+        if(swi[1]!=true)
+        {
+          createButtons();
+          swi[1]=true;
+          seq=2;
+        }
         console.log("testing function1");
         try
         {
@@ -472,8 +483,15 @@ function load0()
         
     }
 
-    recipes[3].addEventListener("click",()=>
+    recipes[3].addEventListener("click",load3);
+    function load3()
     {
+        if(swi[1]!=true)
+        {
+          createButtons();
+          swi[1]=true;
+          seq=3;
+        }
         console.log("testing function1");
         try
         {
@@ -557,10 +575,18 @@ function load0()
 
         section2.append(temp);
         
-    });
+    }
     
-    recipes[4].addEventListener("click",()=>
+    recipes[4].addEventListener("click",load4);
+    function load4()
     {
+        if(swi[1]!=true)
+        {
+          createButtons();
+          swi[1]=true;
+          seq=4;
+        }
+        
         console.log("testing function1");
         try
         {
@@ -662,10 +688,18 @@ function load0()
 
         section2.append(temp);
         
-    });
+    }
 
-    recipes[5].addEventListener("click",()=>
+    recipes[5].addEventListener("click",load5);
+    function load5()
     {
+        if(swi[1]!=true)
+        {
+          createButtons();
+          swi[1]=true;
+          seq=5;
+        }
+        
         console.log("testing function1");
         try
         {
@@ -759,5 +793,5 @@ function load0()
 
         section2.append(temp);
         
-    });
+    }
 
