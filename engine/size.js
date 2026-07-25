@@ -14,6 +14,16 @@ if(windowW1<500)
   i2.remove();
   i3.remove();
   i4.remove();
+  
+  let navDiv=document.createElement("div");
+  navDiv.id="navDiv";
+  
+  let l1=document.createElement("label");
+  l1.innerHTML="Demo Website";
+  l1.id="demo";
+  let l2 =document.createElement("label");
+  navDiv.append(l1);
+  navBar.append(navDiv);
   let sec1=document.getElementById("section1");
   section1.setAttribute("style","position:static;");
   let sec=document.getElementById("sections");
