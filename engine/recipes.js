@@ -28,8 +28,12 @@ recipes[0].addEventListener("click",()=>
         {
             let temp=document.getElementById("temp");
             temp.remove();
+            
         }
         catch{}
+        //This is the display change
+            
+        //________________________
         let img=document.createElement("img");
         img.id="img1";
         img.src="./img/zukin.jpeg";
@@ -132,6 +136,17 @@ recipes[0].addEventListener("click",()=>
         temp.append(ol);
 
         section2.append(temp);
+        
+        if(phone!=false)
+        {
+            let section1=document.getElementById("section1");
+            const cloneDiv=section1.cloneNode;
+            section1.remove();
+            cloneDiv.id="section1";
+            img.setAttribute("style","width:300px;height:300px;border-radius:20px;")
+            
+            section2.setAttribute("style","width:100%;");
+        }
         
     });
 
