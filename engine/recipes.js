@@ -30,9 +30,10 @@ for(let i=0;i<len;i++)
     }
     );*/
 }
+
 // will have to think about this properly i am running out of time its 19:48 im just going to t manually for now
 let swi=[false,false];
-
+let cln;
 function createButtons()
 {
    navD
@@ -64,14 +65,16 @@ function createButtons()
            
             let img1=document.getElementById("img1");
             let section1=document.getElementById("section1");
-            const cloneDiv=section1.cloneNode;
+            const cloneDiv=section1.cloneNode(true);
             section1.remove();
-            cloneDiv.id="section1";
+            setHome(cloneDiv);
+            
             img1.setAttribute("style","width:300px;height:300px;border-radius:20px;margin-left:auto;margin-right:auto;display:block;");
             
             section2.setAttribute("class","phoneDiv");
             demo.setAttribute("class","demoC");
             demo.innerHTML="Home";
+            demo.addEventListener("click",home);
             navDiv.setAttribute("style"," display:flex;justify-content:space-around;width:100%;align-items:center;");
             
             
@@ -81,13 +84,22 @@ function createButtons()
       navD.append(button1);
       
 }
+let cln1;
+function setHome(cln2)
+{
+  
+}
+function home()
+{
+    temp.remove();
+    sections.append(stateCln);
+}
 function sizer(img1)
 {
             img1.setAttribute("style","width:300px;height:300px;border-radius:20px;margin-left:auto;margin-right:auto;display:block;");
 }
 function loader()
 {
-    window.alert(seq);
     
     if(swi[0]==false)
     {
@@ -97,7 +109,7 @@ function loader()
     {
       seq--;
     }
-    if(seq<=0)
+    if(seq<=-1)
     {
       seq=5;
     }
@@ -269,12 +281,7 @@ function load0()
     
     function load1()
     {
-        if(swi[1]!=true)
-        {
-          createButtons();
-          swi[1]=true;
-          seq=1;
-        }
+        
         console.log("testing function1");
         try
         {
@@ -383,17 +390,16 @@ function load0()
         temp.append(ol);
 
         section2.append(temp);
-        
+        if(swi[1]!=true && phone==true)
+        {
+          createButtons();
+          swi[1]=true;
+          seq=1;
+        }
     }
     recipes[2].addEventListener("click",load2);
    function load2()
    {
-        if(swi[1]!=true)
-        {
-          createButtons();
-          swi[1]=true;
-          seq=2;
-        }
         console.log("testing function1");
         try
         {
@@ -504,17 +510,17 @@ function load0()
 
         section2.append(temp);
         
+        if(swi[1]!=true && phone==true)
+        {
+          createButtons();
+          swi[1]=true;
+          seq=2;
+        }
     }
 
     recipes[3].addEventListener("click",load3);
     function load3()
     {
-        if(swi[1]!=true)
-        {
-          createButtons();
-          swi[1]=true;
-          seq=3;
-        }
         console.log("testing function1");
         try
         {
@@ -601,19 +607,17 @@ function load0()
         temp.append(ol);
 
         section2.append(temp);
-        
+        if(swi[1]!=true && phone==true)
+        {
+          createButtons();
+          swi[1]=true;
+          seq=3;
+        }
     }
     
     recipes[4].addEventListener("click",load4);
     function load4()
     {
-        if(swi[1]!=true)
-        {
-          createButtons();
-          swi[1]=true;
-          seq=4;
-        }
-        
         console.log("testing function1");
         try
         {
@@ -718,19 +722,17 @@ function load0()
         temp.append(ol);
 
         section2.append(temp);
-        
+        if(swi[1]!=true)
+        {
+          createButtons();
+          swi[1]=true;
+          seq=4;
+        }
     }
 
     recipes[5].addEventListener("click",load5);
     function load5()
     {
-        if(swi[1]!=true)
-        {
-          createButtons();
-          swi[1]=true;
-          seq=5;
-        }
-        
         console.log("testing function1");
         try
         {
@@ -827,6 +829,11 @@ function load0()
         temp.append(ol);
 
         section2.append(temp);
-        
+        if(swi[1]!=true && phone==true)
+        {
+          createButtons();
+          swi[1]=true;
+          seq=5;
+        }
     }
-
+let stateCln=document.getElementById("section1").cloneNode(true);
