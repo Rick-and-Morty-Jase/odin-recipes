@@ -42,23 +42,7 @@ else
   
 }
 let numImg=0;
-if(phone==true)
-{
-   let imgArray=document.querySelectorAll("img");
-   let stop=false;
-   for(let i=0;stop!=true;i++)
-   {
-     try
-     {
-       imgArray[i].setAttribute("class","imagesC");
-     }
-     catch(err)
-     {
-       console.log(err);
-     }
-     }
-   }
-}
+
 
 
 
