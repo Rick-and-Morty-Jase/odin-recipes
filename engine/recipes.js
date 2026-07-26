@@ -1,3 +1,52 @@
+let windowW1=window.innerWidth;
+let phone=false;
+let section1=document.getElementById("section1").offsetWidth;
+let navBar=document.getElementById("nav");
+console.log(windowW1);
+if(windowW1<500)
+{
+  console.log(phone);
+  phone=true;
+  let i1=document.getElementById("i1");
+  let i2=document.getElementById("i2");
+  let i3=document.getElementById("i3");
+  let i4=document.getElementById("i4");
+  
+  i1.remove();
+  i2.remove();
+  i3.remove();
+  i4.remove();
+  
+  let navDiv=document.createElement("div");
+  navDiv.id="navDiv";
+  
+  let l1=document.createElement("label");
+  l1.innerHTML="Demo Website";
+  l1.id="demo";
+  let l2 =document.createElement("label");
+  navDiv.append(l1);
+  navBar.append(navDiv);
+  let sec1=document.getElementById("section1");
+  sec1.setAttribute("style","position:static;");
+  let sec=document.getElementById("sections");
+  sec.setAttribute("style","display:flex;flex-direction:column;color:red;");
+  let win=window.innerWidth;
+  sec1.setAttribute("style","display:flex;width:100%;");
+  
+  console.log("testin1");
+
+
+}
+else
+{
+  
+}
+
+
+
+
+
+
 let recipes=new Array();
 
 let demo=document.getElementById("demo");
@@ -8,7 +57,7 @@ let end=false;
 let id=document.getElementById("test");
 let len=document.getElementById("recipeL").children.length;
 let section2=document.getElementById("section2");
-let section1=document.getElementById("section1").offsetWidth;
+
 let windowW=window.innerWidth;
 let spacing=windowW-section1;
 spacing=spacing/2;
@@ -91,8 +140,7 @@ function setHome(cln2)
 }
 function home()
 {
-    temp.remove();
-    sections.append(stateCln);
+    location.reload();
 }
 function sizer(img1)
 {
