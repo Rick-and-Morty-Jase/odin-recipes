@@ -1,3 +1,7 @@
+window.alert("Please note that the recipes I took are sourced from a website i found on the Odin Projects Website")
+
+
+
 let windowW1=window.innerWidth;
 let phone=false;
 let section1=document.getElementById("section1").offsetWidth;
@@ -8,12 +12,12 @@ if(windowW1<500)
   console.log(phone);
   phone=true;
   let i1=document.getElementById("i1");
-  let i2=document.getElementById("i2");
+ 
   let i3=document.getElementById("i3");
   let i4=document.getElementById("i4");
   
   i1.remove();
-  i2.remove();
+  
   i3.remove();
   i4.remove();
   
@@ -39,7 +43,40 @@ if(windowW1<500)
 }
 else
 {
-  
+    let navPos=document.getElementById("nav").offsetTop;
+    let navH=document.getElementById("nav").offsetHeight;
+
+    let scrollY=0;
+
+    window.addEventListener("scroll", () => 
+    {
+        scrollY=window.scrollY;
+        console.log(scrollY);
+        if(scrollY>=60)
+        {
+            setMenuDiv();
+        }
+        if(scrollY<=0)
+        {
+            returnMenu();
+        }
+    });
+
+    let secD=document.getElementById("section1");
+
+    function setMenuDiv()
+    {
+        secD.setAttribute("class","section1A");
+      
+    }
+    function returnMenu()
+    {
+        secD.setAttribute("class","section1");
+
+    }
+
+    console.log(navPos);
+    console.log(navH);
 }
 let numImg=0;
 
